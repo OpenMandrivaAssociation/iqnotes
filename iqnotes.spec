@@ -18,7 +18,6 @@ URL:		http://iqnotes.berlios.de/
 Source0:	%name-%version%betaver.tar.bz2
 Source1:	%name-icons.tar.bz2
 Patch0:		%name.patch.bz2
-BuildRoot:	%_tmppath/%name-%version-buildroot
 Buildrequires:	libqt-devel
 
 %description
