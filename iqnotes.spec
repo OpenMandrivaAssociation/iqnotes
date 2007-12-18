@@ -3,9 +3,6 @@
 %define	betaver	rc1
 %define	release %mkrel 0.%betaver.1
 
-%define	section	Office/Tasks Management
-%define	title   IQNotes
-
 %define	Summary Advanced outliner application
 
 Summary:	%Summary
@@ -48,14 +45,14 @@ qmake
 
 # Menu
 %__mkdir_p %buildroot%_menudir
-cat > %buildroot%_menudir/%name << EOF
-?package(%name): \
-command="%_bindir/%name" \
-needs="X11" \
-icon="%name.png" \
-section="%section" \
-title="%title" \
-longtitle="%Summary"
+cat << EOF > %buildroot%{_datadir}/applications/mandriva-%name.desktop
+[Desktop Entry]
+Type=Application << EOF
+Exec=%_bindir/%name
+Icon=%name
+Categories=Office;ProjectManagement
+Name=IQNotes
+Comment=%Summary
 EOF
 
 # icons
@@ -78,7 +75,7 @@ rm -rf %buildroot
 %defattr(0644,root,root,0755)
 %doc %{name}/COPYING %{name}/COPYRIGHT %{name}/README.DESKTOP %{name}/INSTALL
 %doc %{name}/ChangeLog %{name}/AUTHORS %{name}/THANKS %{name}/TODO
-%_menudir/*
+%{_datadir}/applications/mandriva-*.desktop
 %dir %_datadir/%{name}
 %_datadir/%{name}
 %_miconsdir/*
