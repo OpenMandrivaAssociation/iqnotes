@@ -44,7 +44,7 @@ qmake
 %{__install} pics/%{name}/*.png %{buildroot}%{_datadir}/%{name}
 
 # Menu
-%__mkdir_p %buildroot%_menudir
+%__mkdir_p %buildroot%{_datadir}/applications
 cat << EOF > %buildroot%{_datadir}/applications/mandriva-%name.desktop
 [Desktop Entry]
 Type=Application << EOF
