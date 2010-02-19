@@ -14,9 +14,9 @@ Group:		Office
 URL:		http://iqnotes.berlios.de/
 Source0:	%name-%version%betaver.tar.bz2
 Source1:	%name-icons.tar.bz2
-Patch0:		%name.patch.bz2
+Patch0:		%name.patch
 BuildRoot:	%_tmppath/%name-%version-buildroot
-Buildrequires:	libqt-devel
+Buildrequires:	qt3-devel
 
 %description
 IQNotes is notes kept in a hierarchical(tree like) manner. It handles todo,
@@ -27,13 +27,11 @@ algorithm.
 %prep
 %setup -q -n %{name}-%{version}%{betaver}
 %setup -q -n %{name}-%{version}%{betaver} -T -D -a1
-%patch
+%patch0
 
 %build
-QTDIR=%{_prefix}/lib/qt3
-export QTDIR
 cd %{name}
-qmake
+%qmake_qt3
 %make
 
 %install
