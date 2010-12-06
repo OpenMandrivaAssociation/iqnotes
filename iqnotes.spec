@@ -1,7 +1,7 @@
 %define	name    iqnotes
 %define	version	2.1.0
 %define	betaver	rc1
-%define	release %mkrel 0.%betaver.1
+%define	release %mkrel 0.%betaver.2
 
 %define	Summary Advanced outliner application
 
