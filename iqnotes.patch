@@ -1,0 +1,11 @@
+--- iqnotes/iqnotes.pro.OLD	2005-12-29 21:41:50.000000000 +0100
++++ iqnotes/iqnotes.pro	2005-12-29 21:42:12.000000000 +0100
+@@ -62,7 +62,7 @@
+              TODO \
+              ChangeLog \
+              make_arm 
+-desktop:DEFINES = IQNOTES_PICDIR="\"/usr/share/iqnotes\""
++desktop:DEFINES = IQNOTES_PICDIR="\"/usr/share\""
+ desktop:INTERFACES = desktop/ui/*.ui
+ desktop:HEADERS += desktop/qpe/*.h
+ desktop:SOURCES += desktop/qpe/*.cpp
