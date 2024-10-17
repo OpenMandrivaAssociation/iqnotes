@@ -11,7 +11,7 @@ Version:	%version
 Release:	%release
 License:	GPL
 Group:		Office
-URL:		http://iqnotes.berlios.de/
+URL:		https://iqnotes.berlios.de/
 Source0:	%name-%version%betaver.tar.bz2
 Source1:	%name-icons.tar.bz2
 Patch0:		%name.patch
