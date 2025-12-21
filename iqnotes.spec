@@ -16,6 +16,7 @@ Source0:	%name-%version%betaver.tar.bz2
 Source1:	%name-icons.tar.bz2
 Patch0:		%name.patch
 BuildRoot:	%_tmppath/%name-%version-buildroot
+BuildRequires:	make
 Buildrequires:	qt3-devel
 
 %description
